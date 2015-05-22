@@ -14,4 +14,7 @@ module.exports.bootstrap = function(cb) {
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   cb();
+  var gm = require('../api/services/boot').gm;
+  var config =   require('../api/lib/config').config;
+  console.log(gm[config[0].name]);
 };
