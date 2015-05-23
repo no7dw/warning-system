@@ -22,8 +22,9 @@ module.exports = {
 
       var obj = gm[config[0].name];
       var query = gm[config[0].query];
+      console.log("query", query);
       obj.find(query , function(err, result){
-          console.log(err, result);
+          console.log(err, result.length);
       });
       res.json(200,{});
   }
