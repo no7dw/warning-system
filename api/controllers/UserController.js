@@ -21,11 +21,14 @@ module.exports = {
       var config =   require('../lib/config').config;
 
       var obj = gm[config[0].name];
-      var query = gm[config[0].query];
+      
+      var query = config[0].query.warning;
+      console.log("query",query);
+      // return res.json(200, query);
       obj.find(query , function(err, result){
           console.log(err, result);
-      });
-      res.json(200,{});
+          res.json(200,{length:result.length});
+      });      
   }
 };
 
