@@ -34,8 +34,11 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
+  },
+  'get /user/test':{
+    controller:'UserController',
+    action: 'test'
   }
-
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
