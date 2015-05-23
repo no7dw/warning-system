@@ -19,7 +19,12 @@ module.exports = {
       };
       //var gm = require('../api/services/boot').gm;
       var config =   require('../lib/config').config;
-      console.log(gm[config[0].name]);
+      //console.log(gm[config[0].name]);
+      var obj = gm[config[0].name];
+      var query = gm[config[0].query];
+      obj.find(query , function(err, result){
+          console.log(err, result);
+      });
       res.json(200,{});
   }
 };
