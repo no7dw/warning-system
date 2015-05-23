@@ -17,9 +17,9 @@ module.exports = {
           "user_account":User_account,
           "user_account_summary":User_account_summary
       };
-      //var gm = require('../api/services/boot').gm;
+
       var config =   require('../lib/config').config;
-      //console.log(gm[config[0].name]);
+
       var obj = gm[config[0].name];
       var query = gm[config[0].query];
       obj.find(query , function(err, result){
